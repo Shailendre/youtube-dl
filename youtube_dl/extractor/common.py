@@ -1,11 +1,12 @@
 import base64
 import hashlib
 import json
+import netrc
 import os
 import re
 import socket
 import sys
-import netrc
+import time
 import xml.etree.ElementTree
 
 from ..utils import (
@@ -459,6 +460,9 @@ class InfoExtractor(object):
         if secure: regexes = self._og_regexes('video:secure_url') + regexes
         return self._html_search_regex(regexes, html, name, **kargs)
 
+    def _og_search_url(self, html, **kargs):
+        return self._og_search_property('url', html, **kargs)
+
     def _html_search_meta(self, name, html, display_name=None, fatal=False):
         if display_name is None:
             display_name = name
@@ -572,6 +576,13 @@ class InfoExtractor(object):
         else:
             return url
 
+    def _sleep(self, timeout, video_id, msg_template=None):
+        if msg_template is None:
+            msg_template = u'%(video_id)s: Waiting for %(timeout)s seconds'
+        msg = msg_template % {'video_id': video_id, 'timeout': timeout}
+        self.to_screen(msg)
+        time.sleep(timeout)
+
 
 class SearchInfoExtractor(InfoExtractor):
     """
@@ -615,4 +626,3 @@ class SearchInfoExtractor(InfoExtractor):
     @property
     def SEARCH_KEY(self):
         return self._SEARCH_KEY
-

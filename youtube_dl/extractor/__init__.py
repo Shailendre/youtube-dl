@@ -3,6 +3,7 @@ from .addanime import AddAnimeIE
 from .aftonbladet import AftonbladetIE
 from .anitube import AnitubeIE
 from .aol import AolIE
+from .allocine import AllocineIE
 from .aparat import AparatIE
 from .appletrailers import AppleTrailersIE
 from .archiveorg import ArchiveOrgIE
@@ -63,6 +64,7 @@ from .dailymotion import (
 from .daum import DaumIE
 from .dotsub import DotsubIE
 from .dreisat import DreiSatIE
+from .drtv import DRTVIE
 from .defense import DefenseGouvFrIE
 from .discovery import DiscoveryIE
 from .divxstage import DivxStageIE
@@ -103,12 +105,15 @@ from .freesound import FreesoundIE
 from .freespeech import FreespeechIE
 from .funnyordie import FunnyOrDieIE
 from .gamekings import GamekingsIE
+from .gameone import GameOneIE
 from .gamespot import GameSpotIE
 from .gametrailers import GametrailersIE
 from .gdcvault import GDCVaultIE
 from .generic import GenericIE
 from .googleplus import GooglePlusIE
 from .googlesearch import GoogleSearchIE
+from .gorillavid import GorillaVidIE
+from .goshgay import GoshgayIE
 from .hark import HarkIE
 from .helsinki import HelsinkiIE
 from .hentaistigma import HentaiStigmaIE
@@ -146,7 +151,11 @@ from .ku6 import Ku6IE
 from .la7 import LA7IE
 from .lifenews import LifeNewsIE
 from .liveleak import LiveLeakIE
-from .livestream import LivestreamIE, LivestreamOriginalIE
+from .livestream import (
+    LivestreamIE,
+    LivestreamOriginalIE,
+    LivestreamShortenerIE,
+)
 from .lynda import (
     LyndaIE,
     LyndaCourseIE
@@ -164,11 +173,13 @@ from .mpora import MporaIE
 from .mofosex import MofosexIE
 from .mooshare import MooshareIE
 from .morningstar import MorningstarIE
+from .motherless import MotherlessIE
 from .motorsport import MotorsportIE
 from .moviezine import MoviezineIE
 from .movshare import MovShareIE
 from .mtv import (
     MTVIE,
+    MTVServicesEmbeddedIE,
     MTVIggyIE,
 )
 from .musicplayon import MusicPlayOnIE
@@ -195,6 +206,7 @@ from .normalboots import NormalbootsIE
 from .novamov import NovaMovIE
 from .nowness import NownessIE
 from .nowvideo import NowVideoIE
+from .npo import NPOIE
 from .nrk import (
     NRKIE,
     NRKTVIE,
@@ -216,6 +228,7 @@ from .pornotube import PornotubeIE
 from .prosiebensat1 import ProSiebenSat1IE
 from .pyvideo import PyvideoIE
 from .radiofrance import RadioFranceIE
+from .rai import RaiIE
 from .rbmaradio import RBMARadioIE
 from .redtube import RedTubeIE
 from .ringtv import RingTVIE
@@ -252,6 +265,7 @@ from .soundcloud import (
     SoundcloudUserIE,
     SoundcloudPlaylistIE
 )
+from .soundgasm import SoundgasmIE
 from .southparkstudios import (
     SouthParkStudiosIE,
     SouthparkDeIE,
@@ -271,12 +285,13 @@ from .sztvhu import SztvHuIE
 from .tagesschau import TagesschauIE
 from .teachertube import (
     TeacherTubeIE,
-    TeacherTubeClassroomIE,
+    TeacherTubeUserIE,
 )
 from .teachingchannel import TeachingChannelIE
 from .teamcoco import TeamcocoIE
 from .techtalks import TechTalksIE
 from .ted import TEDIE
+from .tenplay import TenPlayIE
 from .testurl import TestURLIE
 from .tf1 import TF1IE
 from .theplatform import ThePlatformIE
@@ -324,12 +339,14 @@ from .vimeo import (
     VimeoReviewIE,
     VimeoWatchLaterIE,
 )
+from .vimple import VimpleIE
 from .vine import (
     VineIE,
     VineUserIE,
 )
 from .viki import VikiIE
 from .vk import VKIE
+from .vodlocker import VodlockerIE
 from .vube import VubeIE
 from .vuclip import VuClipIE
 from .vulture import VultureIE
@@ -344,6 +361,7 @@ from .weibo import WeiboIE
 from .wimp import WimpIE
 from .wistia import WistiaIE
 from .worldstarhiphop import WorldStarHipHopIE
+from .wrzuta import WrzutaIE
 from .xbef import XBefIE
 from .xhamster import XHamsterIE
 from .xnxx import XNXXIE
